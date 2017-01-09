@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle classes</title>
+  <style type="text/css">
+
+    .toggle-class {
+      background-color: red;
+      width:500px;
+      height :500px;
+    }
+
+    .toggle-class.blue  {
+      background-color: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="my-toggle" class="toggle-class"></div>
+
+  <script type="text/javascript">
+
+    // Je récupère mon élément
+    var myElement = document.getElementById('my-toggle');
+
+
+    // Quand je clique sur mon élément
+    myElement.onclick = function () {
+      myElement.classList.toggle('blue');
+    }
+
+    //j'ajoute un event listener à l'élément myElement qui espionne les mouseenter
+    myElement.addEventListener('mouseenter', function () {
+      myElement.classList.toggle('blue');
+    });
+
+    //j'ajoute un event listener à l'élément myElement qui espionne les mouseleave
+    myElement.addEventListener('mouseleave', function () {
+      myElement.classList.toggle('blue');
+    });
+
+  </script>
+</body>
+</html>
